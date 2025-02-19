@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "TwitterChirpExtended";
+  src: url("./Font/GT-America-Extended-Bold-Trial.otf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e6e9eb;
+}
+
+body {
+  background-color: #000101;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90dvh;
+  width: 100%;
+}
+
+.logoSection img {
+  height: 300px;
+  width: 300px;
+}
+
+.loginSec {
+  width: 300px;
+}
+
+.loginSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.loginSection p {
+  font-family: "TwitterChirpExtended";
+  color: #e6e9eb;
+  font-size: 4rem;
+}
+
+.loginSec h3 {
+  font-family: "TwitterChirpExtended";
+  font-size: 1.5rem;
+  padding: 30px 0;
+}
+
+.loginSec .signuptext {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #929596;
+  font-size: 0.67rem;
+  font-weight: 400;
+}
+
+.loginSec .signuptext a {
+  cursor: pointer;
+  color: rgb(17, 139, 221);
+}
+
+.loginSec .signuptext a:hover {
+  text-decoration: underline;
+}
+
+.loginButtons {
+  margin-bottom: 10px;
+}
+
+.loginButtons i {
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.loginButtons button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: #929596;
+  width: 300px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.loginButtons button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.loginButtons .btnGoogle span {
+  font-weight: 500;
+  color: #53575a;
+}
+
+.loginButtons .btnApple span {
+  color: rgb(15, 15, 15);
+}
+
+.loginButtons .btnApple span,
+.loginButtons .btnGoogle span {
+  font-size: 1rem;
+}
+
+.loginButtons button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.signup button {
+  font-size: 1rem;
+  padding: 12px;
+  margin-top: 10px;
+  color: white;
+  background-color: rgba(28, 155, 241, 255);
+}
+
+.horizontalOr {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontal {
+  align-self: center;
+  width: 50%;
+  height: 1px;
+  background-color: rgb(47, 51, 54);
+}
+
+.or p {
+  color: rgb(214, 214, 214);
+  padding: 0px 15px;
+  font-size: 0.9rem;
+}
+
+.loginSec h4 {
+  margin-top: 60px;
+}
+
+.signin button {
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 20px;
+  border: 1px solid rgb(155, 188, 209);
+  background-color: transparent;
+  color: rgb(17, 139, 221);
+}
+
+.signin button:hover {
+  background-color: rgba(17, 139, 221, 0.1);
+}
+
+.signup button:hover {
+  margin-top: 10px;
+  background-color: rgb(17, 139, 221);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer ul {
+  max-width: 100%;
+  margin: 0 25px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer ul li {
+  padding-right: 15px;
+  color: gray;
+}
+
+.footer ul li a {
+  font-family: "Verdana";
+  font-weight: 100;
+  text-decoration: none;
+  color: gray;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    padding-left: 10%;
+    width: 100%;
+  }
+
+  .logoSection {
+    display: flex;
+    justify-content: flex-start;
+    height: 20dvh;
+  }
+
+  .logoSection img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .loginSection {
+    margin-top: 20px;
+  }
+
+  .loginSection .title {
+    font-size: 3rem;
+  }
+
+  .footer {
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
