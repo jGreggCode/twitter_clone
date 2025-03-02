@@ -13,6 +13,10 @@
   color: #e6e9eb;
 }
 
+input {
+  font-weight: 600;
+}
+
 body {
   background-color: #000101;
 }
@@ -170,6 +174,7 @@ main {
 }
 
 .footer {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +183,6 @@ main {
 
 .footer ul {
   max-width: 100%;
-  margin: 0 25px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -196,6 +200,180 @@ main {
   text-decoration: none;
   color: gray;
   font-size: 0.8rem;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 50, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  position: relative;
+  background-color: #000101;
+  width: 600px;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+#close {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal .modal-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.modal .modal-content {
+  padding: 30px 80px;
+}
+
+.modal .first-form {
+  /* margin-top: 40px; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal .second-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal .second-form div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal .second-form div:nth-child(1) p {
+  color: gray;
+  font-size: 16px;
+}
+
+.modal .first-form input,
+.modal .second-form input,
+.modal .first-form select {
+  padding: 20px 10px;
+  border: 1px solid #585858;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.modal .second-form input::placeholder,
+.modal .first-form input::placeholder {
+  font-size: 1rem;
+}
+
+.modal .first-form input:focus {
+  background-color: transparent;
+}
+
+.modal .birthday p {
+  font-size: 13px;
+  color: gray;
+  margin-top: 10px;
+}
+
+.modal .birthday .select {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+  transform: rotate(45deg);
+  right: 15px;
+  top: 50%;
+  margin-top: -8px;
+  pointer-events: none;
+}
+
+select option {
+  background-color: black;
+}
+
+select option:nth-child(1) {
+  color: blue;
+}
+
+.custom-select .select-label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 12px;
+  padding: 0px 10px;
+  background-color: #000101;
+  color: #53575a;
+}
+
+.modal .second-form div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .second-form div:nth-child(2) p {
+  color: rgb(17, 139, 221);
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.next {
+  cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 50px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: rgb(156, 156, 156);
+  color: rgb(3, 3, 3);
 }
 
 @media (max-width: 1000px) {
@@ -228,5 +406,25 @@ main {
     height: 100%;
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+
+  .modal-container {
+    overflow: scroll;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+
+  .modal {
+    max-width: 100%;
+  }
+
+  .modal .birthday .select {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .next {
+    margin-top: 50px;
   }
 }
